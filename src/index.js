@@ -10,6 +10,9 @@ const createAlunoRouter = require("./routes/rota_aluno");
 // --- Configuração inicial ---
 const app = express();
 const PORT = process.env.PORT || 3000;
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Servidor rodando em 0.0.0.0:${PORT}`);
+});
 
 // --- Função Principal para Iniciar a Aplicação ---
 async function startServer() {
