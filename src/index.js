@@ -9,7 +9,7 @@ const createTurmaRouter = require("./routes/rota_turma");
 const createAlunoRouter = require("./routes/rota_aluno");
 // --- Configuração inicial ---
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // --- Função Principal para Iniciar a Aplicação ---
 async function startServer() {
