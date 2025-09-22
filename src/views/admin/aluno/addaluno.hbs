@@ -1,0 +1,31 @@
+<main>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h2>Novo Aluno</h2>
+            <hr />
+
+            <form action="/rota_aluno/aluno/add" method="POST">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome do Aluno</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome completo" required>
+                </div>
+                <div class="mb-3">
+                    <label for="matricula" class="form-label">Matrícula</label>
+                    <input type="number" class="form-control" id="matricula" name="matricula" placeholder="Digite a matrícula" required>
+                </div>
+                <div class="mb-3">
+                    <label for="id_turma" class="form-label">Turma</label>
+                    <select class="form-select" id="id_turma" name="id_turma" required>
+                        <option selected disabled value="">Selecione uma turma...</option>
+                        {{#each turmas}}
+                            <option value="{{this._id}}">{{this.descricao}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar Aluno</button>
+                <a href="/rota_aluno/aluno" class="btn btn-secondary">Cancelar</a>
+            </form>
+
+        </div>
+    </div>
+</main>

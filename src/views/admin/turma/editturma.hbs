@@ -1,0 +1,22 @@
+<main>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h2>Editar Turma</h2>
+            <hr />
+
+            <form action="/rota_turma/editar_turma" method="POST">
+
+                <input type="hidden" name="id_turma" value="{{turma._id}}">
+
+                <div class="mb-3">
+                    <label for="descricao" class="form-label">Descrição da Turma</label>
+                    <input type="text" class="form-control" id="descricao" name="descricao" value="{{turma.descricao}}" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                <a href="/rota_turma/turma" class="btn btn-secondary">Cancelar</a>
+            </form>
+
+        </div>
+    </div>
+</main>

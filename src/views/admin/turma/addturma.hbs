@@ -1,0 +1,24 @@
+<main>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h3> Nova Turma: </h3>
+            <div class="card">
+                <div class="card-body">
+                    <form action="/rota_turma/turma/add" method="POST">
+                        <label for="descricao">Descrição: </label>
+                        <input
+                            type="text"
+                            id="descricao"
+                            name="descricao"
+                            placeholder="Digite a descrição da turma"
+                            class="form-control"
+                        />
+                        <br />
+                        <button type="submit" class="btn btn-success">Cadastrar
+                            Turma</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

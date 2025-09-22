@@ -1,0 +1,36 @@
+{{! Exemplo de como o arquivo turma.hbs pode ficar }}
+<main>
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h2>Lista de Turmas</h2>
+            <hr />
+            <a href="/rota_turma/turma/add" class="btn btn-success">Nova Turma</a>
+
+            {{#each turmas}}
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <p><b>Descrição: </b> {{this.descricao}}</p>
+                        <small><b>ID: </b> {{this._id}}</small>
+                        <br />
+
+                        <a
+                            href="/rota_turma/editar_turma/{{this._id}}"
+                            class="btn btn-primary mt-2"
+                        >
+                            Editar
+                        </a>
+
+                        <a
+                            href="/rota_turma/deletar_turma/{{this._id}}"
+                            class="btn btn-danger mt-2"
+                            onclick="return confirm('Tem certeza que deseja deletar esta turma e TODOS os seus alunos? Esta ação não pode ser desfeita.');"
+                        >
+                            Deletar
+                        </a>
+
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</main>
